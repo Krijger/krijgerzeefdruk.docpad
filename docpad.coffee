@@ -1,10 +1,22 @@
+subdir = '/docpad'
+
+getUrl = (document) ->
+	baseUrl = subdir ? ''
+	if typeof document is "string"
+		baseUrl + document
+	else
+		baseUrl + (document.url or document.get?('url'))
+
+
 docpadConfig = {
+
+	outPath: 'out' + (subdir ? '')
 
 	templateData:
 
 		site:
 
-			url: "http://www.krijgerzeefdruk.nl/docpad"
+			url: "http://www.krijgerzeefdruk.nl" + (subdir ? '')
 
 			oldUrls: [
 			]
@@ -15,7 +27,7 @@ docpadConfig = {
 			# The website description (for SEO)
 			description: """
 				Krijger zeefdruk is een ambachtelijke zeefdrukkerij in Amsterdam Noord.
-                Wij bieden hoge kwaliteit en ruime mogelijkheden met gebruik van vele materialen en inkten.
+				Wij bieden hoge kwaliteit en ruime mogelijkheden met gebruik van vele materialen en inkten.
 				"""
 
 			# The website keywords (for SEO) separated by commas
@@ -28,6 +40,12 @@ docpadConfig = {
 
 			# The website author's email
 			email: "qkrijger@gmail.com"
+
+		getUrl: (document) ->
+			getUrl(document)
+
+		getUrls: (documents) ->
+			(getUrl(document) for document in documents)
 
 		getPreparedTitle: ->
 			# if we have a document title, then we should use that and suffix the site's title onto it
@@ -81,12 +99,6 @@ docpadConfig = {
 				else
 					next()
 
-
-    environments:
-        static:
-            plugins:
-                cleanurls:
-                    enabled: false
 }
 
 # Export our DocPad Configuration

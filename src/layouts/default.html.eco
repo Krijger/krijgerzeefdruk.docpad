@@ -22,11 +22,11 @@
 	<meta name="viewport" content="width=device-width" />
 
 	<!-- Icons -->
-    <link rel="shortcut icon" href="ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href=<%=@getUrl('ico/favicon.ico')%>>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href=<%=@getUrl('ico/apple-touch-icon-144-precomposed.png')%>>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href=<%=@getUrl('ico/apple-touch-icon-114-precomposed.png')%>>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href=<%=@getUrl('ico/apple-touch-icon-72-precomposed.png')%>>
+    <link rel="apple-touch-icon-precomposed" href=<%=@getUrl('ico/apple-touch-icon-57-precomposed.png')%>>
 
 	<!-- Shims: IE6-8 support of HTML5 elements -->
 	<!--[if lt IE 9]>
@@ -34,18 +34,18 @@
 	<![endif]-->
 
 	<!-- Styles -->
-	<%- @getBlock('styles').add(["/vendor/twitter-bootstrap/css/bootstrap.css","/vendor/twitter-bootstrap/css/bootstrap-responsive.css","/styles/style.css"]).toHTML() %>
+	<%- @getBlock('styles').add(@getUrls(['/vendor/twitter-bootstrap/css/bootstrap.css',"/vendor/twitter-bootstrap/css/bootstrap-responsive.css","/styles/style.css"])).toHTML() %>
 </head>
 <body>
 	<!-- Markup -->
 	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
-				<a class="brand" href="/">Krijger Zeefdruk</a>
+				<a class="brand" href=<%=@getUrl('/')%> >Krijger Zeefdruk</a>
 				<ul class="nav">
 					<% for document in @getCollection('pages').toJSON(): %>
-						<li typeof="sioc:Page" about="<%= document.url %>" class="<%= 'active'  if @document.url is document.url %>">
-							<a href="<%= document.url %>" property="dc:title"><%= document.title %></a>
+						<li typeof="sioc:Page" about="<%= @getUrl(document) %>" class="<%= 'active'  if @document.url is document.url %>">
+							<a href="<%= @getUrl(document) %>" property="dc:title"><%= document.title %></a>
 						</li>
 					<% end %>
 				</ul>
@@ -62,9 +62,9 @@
 				This website was last updated at <%= @site.date.toDateString() %>
 			</p>
 		</footer>
-	</div><!-- /container -->
+	</div>
 
 	<!-- Scripts -->
-	<%- @getBlock('scripts').add(["/vendor/jquery.js","/vendor/log.js","/vendor/modernizr.js","/scripts/script.js"]).toHTML() %>
+	<%- @getBlock('scripts').add(@getUrls(["/vendor/jquery.js","/vendor/log.js","/vendor/modernizr.js","/scripts/script.js"])).toHTML() %>
 </body>
 </html>
