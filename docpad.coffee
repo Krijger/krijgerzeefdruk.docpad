@@ -1,22 +1,12 @@
-subdir = '/docpad'
-
-getUrl = (document) ->
-	baseUrl = subdir ? ''
-	if typeof document is "string"
-		baseUrl + document
-	else
-		baseUrl + (document.url or document.get?('url'))
-
-
 docpadConfig = {
 
-	outPath: 'out' + (subdir ? '')
+	outPath: 'out'
 
 	templateData:
 
 		site:
 
-			url: "http://www.krijgerzeefdruk.nl" + (subdir ? '')
+			url: "http://www.krijgerzeefdruk.nl" + (@subDir ? '')
 
 			oldUrls: [
 			]
@@ -42,10 +32,14 @@ docpadConfig = {
 			email: "qkrijger@gmail.com"
 
 		getUrl: (document) ->
-			getUrl(document)
+			baseUrl = @subDir ? ''
+			if typeof document is "string"
+				baseUrl + document
+			else
+				baseUrl + (document.url or document.get?('url'))
 
 		getUrls: (documents) ->
-			(getUrl(document) for document in documents)
+			(@getUrl(document) for document in documents)
 
 		getPreparedTitle: ->
 			# if we have a document title, then we should use that and suffix the site's title onto it
@@ -98,6 +92,12 @@ docpadConfig = {
 					res.redirect(newUrl+req.url, 301)
 				else
 					next()
+
+	environments:
+		prodSim:
+			outPath: 'out/docpad'
+			templateData:
+				subDir: '/docpad'
 
 }
 
