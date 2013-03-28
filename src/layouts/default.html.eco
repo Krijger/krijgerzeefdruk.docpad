@@ -34,6 +34,7 @@
 
 	<!-- Styles -->
 	<%- @getBlock('styles').add(@getUrls(['/vendor/twitter-bootstrap/css/bootstrap.css',"/vendor/twitter-bootstrap/css/bootstrap-responsive.css","/styles/style.css"])).toHTML() %>
+	<%- @getBlock('styles').add(['http://fonts.googleapis.com/css?family=Roboto:400,500,300,300italic,400italic']).toHTML() %>
 </head>
 <body>
 	<!-- Markup -->
@@ -42,7 +43,7 @@
 			<div class="container">
 				<a class="brand" href=<%=@getUrl('/')%> >Krijger Zeefdruk</a>
 				<ul class="nav">
-					<% for document in @getCollection('pages').toJSON(): %>
+					<% for document in @getCollection('quickLinkPages').toJSON(): %>
 						<li typeof="sioc:Page" about="<%= @getUrl(document) %>" class="<%= 'active'  if @document.url is document.url %>">
 							<a href="<%= @getUrl(document) %>" property="dc:title"><%= document.title %></a>
 						</li>

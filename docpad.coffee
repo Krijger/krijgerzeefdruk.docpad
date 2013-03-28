@@ -61,14 +61,11 @@ docpadConfig = {
 
 
 	collections:
-		# For instance, this one will fetch in all documents that have pageOrder set within their meta data
-		pages: (database) ->
-			database.findAllLive({pageOrder: $exists: true}, [pageOrder:1,title:1])
+		quickLinkPages: (database) ->
+			database.findAllLive({tags: $hasAll: ['page', 'quickLink']}, [quickLinkOrder: 1, title: 1])
 
-		# This one, will fetch in all documents that have the tag "post" specified in their meta data
-		posts: (database) ->
-			database.findAllLive({tags: $has: ['post']}, [date:-1])
-
+		mainPages: (database) ->
+			database.findAllLive({tags: $hasAll: ['page', 'mainPage']}, [mainOrder: 1, title: 1])
 
 	events:
 
