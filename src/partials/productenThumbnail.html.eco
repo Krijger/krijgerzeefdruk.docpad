@@ -1,3 +1,0 @@
-<h2>Producten</h2>
-<img src=<%= @getUrl('/img/Fake-pic.png')%> alt="">
-<p>Vele producten behoren tot de mogelijkheden.</p>
