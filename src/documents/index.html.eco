@@ -9,11 +9,11 @@ title: 'Home'
 </div>
 
 <ul class="thumbnails mainpages">
-	<% for mainPage in @getCollection('mainPages').toJSON(): %>
-		<li typeof="sioc:Page" about="<%= @getUrl(mainPage) %>" class="span4">
+	<% for page in @getCollection('mainPages').toJSON(): %>
+		<li typeof="sioc:Page" about="<%= @getUrl(page) %>" class="span4">
 			<div class='thumbnail'>
-			<a href="<%= @getUrl(mainPage) %>">
-					<%- @partial(mainPage.meta.thumbnailPartial, @) %>
+			<a href="<%= @getUrl(page) %>">
+					<%- @partial(page.meta.thumbnailPartial, @) %>
 			</a>
 			</div>
 		</li>

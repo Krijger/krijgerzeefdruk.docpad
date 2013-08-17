@@ -61,11 +61,14 @@ docpadConfig = {
 
 
 	collections:
-		quickLinkPages: (database) ->
-			database.findAllLive({tags: $hasAll: ['page', 'quickLink']}, [quickLinkOrder: 1, title: 1])
+		quickLinkPages: ->
+      @getCollection("html").findAllLive({tags: $hasAll: ['page', 'quickLink']}, [quickLinkOrder: 1, title: 1])
 
-		mainPages: (database) ->
-			database.findAllLive({tags: $hasAll: ['page', 'mainPage']}, [mainOrder: 1, title: 1])
+		mainPages: ->
+      @getCollection("html").findAllLive({tags: $hasAll: ['page', 'mainPage']}, [mainOrder: 1, title: 1])
+
+    producten: ->
+      @getCollection("html").findAllLive({tags: $hasAll: ['page', 'product']}, [productOrder: 1, title: 1])
 
 	events:
 
