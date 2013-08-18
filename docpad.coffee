@@ -59,6 +59,9 @@ docpadConfig = {
 			# Merge the document keywords with the site keywords
 			@site.keywords.concat(@document.keywords or []).join(', ')
 
+  plugins:
+    sass:
+      compass: true
 
 	collections:
 		quickLinkPages: ->

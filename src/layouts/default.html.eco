@@ -37,32 +37,46 @@
 	<%- @getBlock('styles').add(['http://fonts.googleapis.com/css?family=Roboto:400,500,300,300italic,400italic']).toHTML() %>
 </head>
 <body>
-	<!-- Markup -->
-	<div class="navbar navbar-fixed-top">
-		<div class="navbar-inner">
-			<div class="container">
-				<a class="brand" href=<%=@getUrl('/')%> >Krijger Zeefdruk</a>
-				<ul class="nav">
-					<% for document in @getCollection('quickLinkPages').toJSON(): %>
-						<li typeof="sioc:Page" about="<%= @getUrl(document) %>" class="<%= 'active'  if @document.url is document.url %>">
-							<a href="<%= @getUrl(document) %>" property="dc:title"><%= document.title %></a>
-						</li>
-					<% end %>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<div class="container">
-		<section id="content" class="content">
-			<%- @content %>
-		</section>
-		<footer>
-			<p>Krijger Zeefdruk, ks Ibisweg 14-16, 1033 RB Amsterdam. Tel. +31(0)20 633 48 16. Fax. +31(0)20 631 61 86.</p>
-			<p class="copyright">&copy; Krijger Zeefdruk 2013</p>
-		</footer>
-	</div>
 
-	<!-- Scripts -->
-	<%- @getBlock('scripts').add(@getUrls(["/vendor/jquery.js","/vendor/log.js","/vendor/modernizr.js","/scripts/script.js"])).toHTML() %>
+    <header>
+        <div class="container">
+            <ul>
+                <li>
+                    <a class="brand" href=<%=@getUrl('/')%> >Krijger Zeefdruk</a>
+                </li>
+                <% for document in @getCollection('quickLinkPages').toJSON(): %>
+                <li typeof="sioc:Page" about="<%= @getUrl(document) %>"
+                    class="<%= 'active'  if @document.url is document.url %>">
+                    <a href="<%= @getUrl(document) %>" property="dc:title"><%= document.title %></a>
+                </li>
+                <% end %>
+            </ul>
+        </div>
+    </header>
+
+    <div id="page">
+        <!--<header class="navbar navbar-fixed-top">-->
+            <!--<div class="navbar-inner">-->
+                <!--<div class="container">-->
+
+                <!--</div>-->
+            <!--</div>-->
+        <!--</header>-->
+        <div class="main container">
+            <section id="content" class="content">
+                <%- @content %>
+            </section>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <p>Krijger Zeefdruk, ks Ibisweg 14-16, 1033 RB Amsterdam. Tel. +31(0)20 633 48 16. Fax. +31(0)20 631 61 86.</p>
+            <p class="copyright">&copy; Krijger Zeefdruk 2013</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <%- @getBlock('scripts').add(@getUrls(["/vendor/jquery.js","/vendor/log.js","/vendor/modernizr.js","/scripts/script.js"])).toHTML() %>
 </body>
+
 </html>
