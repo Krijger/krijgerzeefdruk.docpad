@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
 	<!-- Meta -->
 	<meta charset="utf-8" />
@@ -55,13 +55,6 @@
     </header>
 
     <div id="page">
-        <!--<header class="navbar navbar-fixed-top">-->
-            <!--<div class="navbar-inner">-->
-                <!--<div class="container">-->
-
-                <!--</div>-->
-            <!--</div>-->
-        <!--</header>-->
         <div class="main container">
             <section id="content" class="content">
                 <%- @content %>

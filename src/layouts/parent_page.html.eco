@@ -15,7 +15,7 @@ layout: default
         <div class='thumbnail'>
             <a href="<%= @getUrl(page) %>">
                 <h2><%= page.title %></h2>
-                <%- @partial(page.name + '_tn.html') %>
+                <%- @partial(page.name + '_tn.html', @) %>
             </a>
         </div>
     </li>
