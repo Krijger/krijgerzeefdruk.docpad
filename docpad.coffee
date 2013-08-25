@@ -1,5 +1,7 @@
 docpadConfig = {
 
+  growl: false # turns off system notifications
+
 	outPath: 'out'
 
 	templateData:
