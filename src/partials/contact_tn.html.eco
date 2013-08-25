@@ -1,2 +1,2 @@
-<img src=<%= @getUrl('/img/map.png') %> alt="Op de kaart is te zien dat Krijger Zeefdruk in Amsterdam Noord ligt">
+<img src=<%= @getUrl('/img/map.png') %> alt="Op de kaart is te zien dat Krijger Zeefdruk in Amsterdam Noord ligt" />
 <p>Voor meer informatie kunt u met ons contact opnemen. Wij staan u graag te woord.</p>

@@ -14,7 +14,11 @@ layout: default
     <li typeof="sioc:Page" about="<%= @getUrl(page) %>" class="span4">
         <div class='thumbnail'>
             <a href="<%= @getUrl(page) %>">
-                <h2><%= page.title %></h2>
+                <h2><% if page.shortTitle?: %>
+                      <%- page.shortTitle %>
+                    <% else: %>
+                      <%- page.title %>
+                    <% end %></h2>
                 <%- @partial(page.name + '_tn.html', @) %>
             </a>
         </div>
