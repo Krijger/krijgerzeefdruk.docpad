@@ -5,6 +5,7 @@
 $kz-green: #64c4c0;
 $kz-darkgreen: #246375;
 $background-color: #dde1ca;
+$thumbnail-color: #fafafa;
 
 $header-height: 50px;
 $header-bottom-margin: 20px;
@@ -113,11 +114,12 @@ ul.mainpages.thumbnails, ul.pages.thumbnails {
   img { padding: 0 0 14px 0; }
 
   div.thumbnail {
-    background-color: #FAFAFA;
+    background-color: $thumbnail-color;
     padding: 14px;
+    border: 2px solid $thumbnail-color;
     &:hover {
       border: 2px solid $kz-green;
-      @include single-box-shadow($kz-green, 0px, 0px, 20px);
+      @include single-box-shadow($kz-green, 0px, 0px, 30px);
     }
   }
 }
