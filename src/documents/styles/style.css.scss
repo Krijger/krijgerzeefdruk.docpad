@@ -115,8 +115,9 @@ ul.mainpages.thumbnails, ul.pages.thumbnails {
 
   div.thumbnail {
     background-color: $thumbnail-color;
-    padding: 14px;
     border: 2px solid $thumbnail-color;
+    min-height: 125px;
+    padding: 14px;
     &:hover {
       border: 2px solid $kz-green;
       @include single-box-shadow($kz-green, 0px, 0px, 30px);
