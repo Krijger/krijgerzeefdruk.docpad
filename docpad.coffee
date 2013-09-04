@@ -106,9 +106,9 @@ docpadConfig = {
 
 	environments:
 		prodSim:
-			outPath: 'out/docpad'
+			outPath: 'out'
 			templateData:
-				subDir: '/docpad'
+				subDir: ''
 
 }
 
