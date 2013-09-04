@@ -47,7 +47,7 @@ body {
   font-family: 'Roboto', sans-serif;
   h1, h2, h3, h4, h5, h6 { font-weight: 400; }
   h2 { font-size: 26px; margin-bottom: 8px; line-height: 34px; }
-  p, ul, ol {
+  p, ul, ol, figcaption {
     font-weight: 300; line-heigth: 1.25em;
     b {
       font-weight: 500;
@@ -122,5 +122,21 @@ ul.mainpages.thumbnails, ul.pages.thumbnails {
       border: 2px solid $kz-green;
       @include single-box-shadow($kz-green, 0px, 0px, 30px);
     }
+  }
+}
+
+figure {
+  // fit content:
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+
+  border-top: 1px solid $kz-darkgreen;
+  border-bottom: 1px solid $kz-darkgreen;
+  padding: 12px;
+  figcaption {
+    font-style: italic;
+    margin-top: 12px;
   }
 }

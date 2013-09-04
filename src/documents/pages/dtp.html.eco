@@ -4,7 +4,7 @@ shortTitle: DTP / prepress
 name: dtp
 layout: page
 tags: ['activiteit']
-activiteitOrder: 5
+activiteitOrder: 7
 ---
 <p>Op het gebied van DTP (desktop publishing) kunt u bij ons terecht voor de volgende zaken.</p>
 
@@ -16,4 +16,8 @@ activiteitOrder: 5
 
 <p>Wij hebben ruime ervaring in het omzetten van scans en foto's in meerkleurenbestanden. Het kan hierbij bijvoorbeeld gaan om een scan van een kunstwerk dat in meerdere mengkleuren gedrukt moet worden. We beschikken over speciale software om een bijzonder nauwkeurige reproductie te maken in elke kleurencombinatie die u maar wenst.</p>
 <p>Wij kunnen daarnaast bijvoorbeeld ook uw (oude) zwart-wit foto's van kwaliteit verbeteren of uw (nieuwe) foto's omzetten naar duotone voor een sepia-effect.</p>
+<figure>
+    <img src=<%=@getUrl('/img/artprints.jpg')%> alt="Twee originele kunstwerken worden getoond naast hun zeefdruk reproductie">
+    <figcaption>Originele kunstwerken kunnen in zeefdruk gereproduceerd worden.</figcaption>
+</figure>
 

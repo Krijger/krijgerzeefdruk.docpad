@@ -1,1 +1,2 @@
+<img src=<%=@getUrl('/img/artprints.jpg')%> alt="Twee originele kunstwerken worden getoond naast hun zeefdruk reproductie">
 <p>Wij verzorgen ook de voorbereiding van een productie, zoals vectoriseren van bestanden, grafisch ontwerp, opmaken van logo's en huisstijl...</p>
