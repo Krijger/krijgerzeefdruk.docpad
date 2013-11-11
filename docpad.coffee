@@ -81,6 +81,9 @@ docpadConfig = {
     over: ->
       @getCollection("html").findAllLive({tags: $hasAll: ['page', 'over']}, [overOrder: 1, title: 1])
 
+#    json: ->
+#      @getFiles().findAllLive()
+
 	events:
 
 		# Server Extend

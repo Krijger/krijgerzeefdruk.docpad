@@ -1,3 +1,0 @@
-<h2>Activiteiten</h2>
-<img src=<%=@getUrl('/img/Fake-pic.png')%> alt="">
-<p>Voor vele zaken om het proces van zeefdruk heen kunt u bij ons terecht.</p>

@@ -12,6 +12,14 @@ $header-bottom-margin: 20px;
 $footer-height: 40px;
 $footer-top-margin: 20px;
 
+
+@mixin fit-content {
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+
 /*
       GENERAL LAYOUT
 */
@@ -23,7 +31,7 @@ header {
 }
 
 div#page {
-  padding-bottom: ($footer-height + $footer-top-margin);
+  //padding-bottom: ($footer-height + $footer-top-margin);
   padding-top: ($header-height + $header-bottom-margin);
   overflow: auto;
 }
@@ -31,7 +39,7 @@ div#page {
 footer {
   bottom: 0;
   height: $footer-height;
-  position: fixed;
+  //position: fixed;
 }
 
 header, footer, div.page {
@@ -54,6 +62,8 @@ body {
     }
   }
 }
+
+.hero-unit { background-color: $thumbnail-color; }
 
 footer {
   border-top: 1px solid $kz-darkgreen;
@@ -122,21 +132,21 @@ ul.mainpages.thumbnails, ul.pages.thumbnails {
       border: 2px solid $kz-green;
       @include single-box-shadow($kz-green, 0px, 0px, 30px);
     }
+    &.withImage { min-height: 345px; }
   }
 }
 
 figure {
-  // fit content:
-  display: -moz-inline-stack;
-  display: inline-block;
-  zoom: 1;
-  *display: inline;
+  @include fit-content;
 
   border-top: 1px solid $kz-darkgreen;
   border-bottom: 1px solid $kz-darkgreen;
-  padding: 12px;
+  img {
+    margin: 12px;
+  }
   figcaption {
     font-style: italic;
-    margin-top: 12px;
+    margin: 0 12px 12px 12px;
   }
 }
+

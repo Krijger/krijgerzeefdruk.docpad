@@ -9,13 +9,17 @@ title: 'Home'
 </div>
 
 <ul class="thumbnails mainpages">
-	<% for page in @getCollection('mainPages').toJSON(): %>
-		<li typeof="sioc:Page" about="<%= @getUrl(page) %>" class="span4">
-			<div class='thumbnail'>
-			<a href="<%= @getUrl(page) %>">
-					<%- @partial(page.meta.thumbnailPartial, @) %>
-			</a>
-			</div>
-		</li>
-	<% end %>
+<% for page in @getCollection('mainPages').toJSON(): %>
+<li typeof="sioc:Page" about="<%= @getUrl(page) %>" class="span4">
+    <a href="<%= @getUrl(page) %>">
+        <div class='thumbnail <%= "withImage" if page.item_image_url %>'>
+            <h2><%= page.title %></h2>
+            <% if page.item_image_url : %>
+            <img src="<%= @getUrl(page.item_image_url) %>" alt="<%= page.item_image_alt %>">
+            <% end %>
+            <p><%= page.item_message %></p>
+        </div>
+    </a>
+</li>
+<% end %>
 </ul>

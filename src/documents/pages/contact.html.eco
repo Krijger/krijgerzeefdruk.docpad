@@ -16,3 +16,5 @@ overOrder: 5
 
 <h4>Of kom even langs</h4>
 <p>Ks Ibisweg 14-16, 1033 RB Amsterdam</p>
+
+<p>Zie ook onze <a href="<%=@getUrl('aanleverspecificaties')%>">aanleverspectificaties</a>.</p>

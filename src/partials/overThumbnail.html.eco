@@ -1,3 +1,0 @@
-<h2>Over (Krijger) Zeefdruk</h2>
-<img src=<%= @getUrl('/img/map.png') %> alt="Op de kaart is te zien dat Krijger Zeefdruk in Amsterdam Noord ligt">
-<p>Achtergrondinformatie over zeefdruk, Krijger Zeefdruk en onze contactinformatie.</p>
