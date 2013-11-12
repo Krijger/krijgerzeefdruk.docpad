@@ -9,7 +9,7 @@ title: 'Home'
 </div>
 
 <ul class="thumbnails mainpages">
-<% for page in @getCollection('mainPages').toJSON(): %>
+<% for page in @getFiles(['producten', 'activiteiten']).toJSON(): %>
 <li typeof="sioc:Page" about="<%= @getUrl(page) %>" class="span4">
     <a href="<%= @getUrl(page) %>">
         <div class='thumbnail <%= "withImage" if page.item_image_url %>'>
