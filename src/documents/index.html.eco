@@ -13,4 +13,4 @@ title: 'Home'
         particulier bent, wij staan met al onze kennis klaar om u van mooi en goed drukwerk te voorzien.</p>
 </div>
 
-<%- @partial('thumbnails', { test:'mainpages', documentNames: ['producten', 'activiteiten', 'over'] }) %>
+<%- @partial('thumbnails', { ulClass: 'mainpages', documentNames: ['producten', 'activiteiten', 'over'] }) %>

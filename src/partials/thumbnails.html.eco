@@ -1,4 +1,4 @@
-<ul class="thumbnails <%= @test %>">
+<ul class="thumbnails <%= @ulClass %>">
     <% for page in @findDocumentsWithNames(@documentNames).toJSON(): %>
     <li typeof="sioc:Page" about="<%= @getUrl(page) %>" class="span4">
         <a href="<%= @getUrl(page) %>">
