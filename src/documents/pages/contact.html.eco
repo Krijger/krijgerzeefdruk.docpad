@@ -1,10 +1,15 @@
 ---
 title: Contact
 name: contact
+
 layout: page
-tags: ['quickLink', 'over']
+
+tags: ['quickLink']
 quickLinkOrder: 4
-overOrder: 5
+
+item_image_url: /img/map.png
+item_image_alt: Op de kaart is te zien dat Krijger Zeefdruk in Amsterdam Noord ligt
+item_message: Voor meer informatie kunt u met ons contact opnemen. Wij staan u graag te woord.
 ---
 <p>U kunt natuurlijk (vrijblijvend) contact met ons opnemen.</p>
 

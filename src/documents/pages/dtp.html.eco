@@ -1,10 +1,12 @@
---- yaml
+---
 title: Beeldbewerking en prepress
 shortTitle: DTP / prepress
 name: dtp
 layout: page
-tags: ['activiteit']
-activiteitOrder: 7
+
+item_image_url: /img/artprints.jpg
+item_image_alt: Twee originele kunstwerken worden getoond naast hun zeefdruk reproductie
+item_message:   Wij verzorgen ook de voorbereiding van een productie, zoals vectoriseren van bestanden, grafisch ontwerp, opmaken van logo's en huisstijl...
 ---
 <p>Op het gebied van DTP (desktop publishing) kunt u bij ons terecht voor de volgende zaken.</p>
 

@@ -1,2 +1,0 @@
-<img src=<%= @getUrl('/img/abraham-beschildert-glas.jpg') %> alt="Abraham Krijger, oprichter van Krijger Zeefdruk, beschildert een glazen wanddecoratie voor een restaurant" />
-<p>Krijger Zeefdruk is ontstaan in 1955. Trots waren we toen, en trots zijn we nog altijd...</p>

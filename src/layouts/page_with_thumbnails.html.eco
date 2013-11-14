@@ -1,0 +1,11 @@
+---
+layout: default
+---
+<div class="hero-unit">
+    <article id="page" class="page">
+        <h1><%= if @document.full_title then @document.full_title else @document.title %></h1>
+        <div class="page-content"><%- @content %></div>
+    </article>
+</div>
+
+<%- @partial('thumbnails', { ulClass: @document.thumbnailListClass, documentNames: @document.subDocumentNames }) %>

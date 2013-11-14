@@ -76,18 +76,6 @@ docpadConfig = {
     quickLinkPages: ->
       @getCollection("html").findAllLive({tags: $hasAll: ['page', 'quickLink']}, [quickLinkOrder: 1, title: 1])
 
-    mainPages: ->
-      @getCollection("html").findAllLive({tags: $hasAll: ['page', 'mainPage']}, [mainOrder: 1, title: 1])
-
-    producten: ->
-      @getCollection("html").findAllLive({tags: $hasAll: ['page', 'product']}, [productOrder: 1, title: 1])
-
-    activiteiten: ->
-      @getCollection("html").findAllLive({tags: $hasAll: ['page', 'activiteit']}, [activiteitOrder: 1, title: 1])
-
-    over: ->
-      @getCollection("html").findAllLive({tags: $hasAll: ['page', 'over']}, [overOrder: 1, title: 1])
-
   events:
 
     # Server Extend
