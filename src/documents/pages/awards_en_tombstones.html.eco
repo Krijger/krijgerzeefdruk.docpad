@@ -8,11 +8,11 @@ productOrder: 8
 <p>Wij maken voor u de mooiste awards en tombstones van acrylaat, glas en andere materialen. De mogelijkheden zijn nagenoeg onbeperkt. Informeer bij ons naar de mogelijkheden of kom eens kijken naar wat voorbeelden.</p>
 
 <figure>
-    <img src=<%=@getUrl('/img/awards_tombstones_BnaAwardMK_2.jpg')%> alt="Krijger zeefdruk bedrukte de BNA award.">
+    <img src="<%= @getUrl('/img/awards_tombstones_BnaAwardMK_2.jpg') %>" alt="Krijger zeefdruk bedrukte de BNA award.">
     <figcaption>Deze BNA award is gemaakt van perspex dat eerst in vorm gelaserd werd en daarna door ons bedrukt is. </figcaption>
 </figure>
 
 <figure>
-    <img src=<%=@getUrl('/img/awards-tombstones-huisjes.jpg')%> alt="Krijger Zeefdruk bedrukte deze huisjes van acrylaat.">
+    <img src="<%= @getUrl('/img/awards-tombstones-huisjes.jpg') %>" alt="Krijger Zeefdruk bedrukte deze huisjes van acrylaat.">
     <figcaption>Krijger Zeefdruk bedrukte deze tastbare herinnering aan de acquisitie van BTE.</figcaption>
 </figure>

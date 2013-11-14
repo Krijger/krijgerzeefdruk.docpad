@@ -1,0 +1,15 @@
+<ul class="thumbnails <%= @test %>">
+    <% for page in @findDocumentsWithNames(@documentNames).toJSON(): %>
+    <li typeof="sioc:Page" about="<%= @getUrl(page) %>" class="span4">
+        <a href="<%= @getUrl(page) %>">
+            <div class='thumbnail <%= "withImage" if page.item_image_url %>'>
+                <h2><%= page.title %></h2>
+                <% if page.item_image_url : %>
+                <img src="<%= @getUrl(page.item_image_url) %>" alt="<%= page.item_image_alt %>">
+                <% end %>
+                <p><%= page.item_message %></p>
+            </div>
+        </a>
+    </li>
+    <% end %>
+</ul>
