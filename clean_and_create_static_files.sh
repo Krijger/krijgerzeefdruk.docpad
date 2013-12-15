@@ -1,4 +1,7 @@
 #!/bin/bash
+
+set -eux
+
 sudo rm -rf out
 docpad generate --env static,prodSim
 sudo chown -R ${USER}:www-data out
