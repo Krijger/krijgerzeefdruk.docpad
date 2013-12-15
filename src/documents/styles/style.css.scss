@@ -98,7 +98,7 @@ header {
 
 footer, header {
   background-color: $kz-green;
-  div.container a {
+  nav a {
     color: $kz-darkgreen;
     font-weight: 400;
     &:hover { color: white; text-decoration: none; }

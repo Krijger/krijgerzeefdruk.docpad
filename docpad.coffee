@@ -40,6 +40,9 @@ docpadConfig = {
       else
         baseUrl + (document.url or document.get?('url'))
 
+    getUrlForDocumentWithName: (name) ->
+      @getUrl(@findDocumentWithName(name))
+
     getUrls: (documents) ->
       (@getUrl(document) for document in documents)
 
@@ -68,13 +71,17 @@ docpadConfig = {
         if index1 < index2 then -1 else if index1 is index2 then 0 else 1
       @getDatabase().findAllLive({name: $in: documentNames}, comparator )
 
+    findDocumentWithName: (documentName) ->
+      documents = @getDatabase().findAllLive({name: documentName})
+#      if documents.length isnt 1
+#        console.warn('Found ' + documents.length + ' documents with name "' + documentName '", where 1 was expected.')
+      documents.toJSON()[0]
+
   plugins:
     sass:
       compass: true
 
-  collections:
-    quickLinkPages: ->
-      @getCollection("html").findAllLive({tags: $hasAll: ['page', 'quickLink']}, [quickLinkOrder: 1, title: 1])
+  collections: {}
 
   events:
 

@@ -4,9 +4,6 @@ name: contact
 
 layout: page
 
-tags: ['quickLink']
-quickLinkOrder: 4
-
 item_image_url: /img/map.png
 item_image_alt: Op de kaart is te zien dat Krijger Zeefdruk in Amsterdam Noord ligt
 item_message: Voor meer informatie kunt u met ons contact opnemen. Wij staan u graag te woord.
@@ -22,4 +19,4 @@ item_message: Voor meer informatie kunt u met ons contact opnemen. Wij staan u g
 <h4>Of kom even langs</h4>
 <p>Ks Ibisweg 14-16, 1033 RB Amsterdam</p>
 
-<p>Zie ook onze <a href="<%=@getUrl('aanleverspecificaties')%>">aanleverspectificaties</a>.</p>
+<p>Zie ook onze <a href="<%=@getUrlForDocumentWithName('aanleverspecificaties')%>">aanleverspectificaties</a>.</p>
